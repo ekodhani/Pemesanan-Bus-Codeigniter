@@ -1,0 +1,60 @@
+/* semuanya */
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url('../image/bg.jpg');
+	/* background-image: url('https://wallpapershome.com/images/pages/pic_h/18949.jpg'); */
+}
+
+.card {
+	background: rgba(0, 0, 0, .8);
+	box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+	border-radius: 10px;
+}
+
+.card h5 {
+	color: #fff;
+}
+
+.card .inputBox {
+	position: relative;
+}
+
+.card .inputBox input {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+}
+
+.card .inputBox label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	font-size: 16px;
+	padding: 10px 0;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.card .inputBox input:focus~label,
+.card .inputBox input:valid~label {
+	top: -18px;
+	left: 0;
+	color: #03a9f4;
+	font-size: 12px;
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+	body {
+		background-image: url('https://wallpapershome.com/images/pages/pic_h/18949.jpg');
+		background-size: cover;
+	}
+}
