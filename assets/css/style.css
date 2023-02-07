@@ -2,18 +2,47 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-image: url('../image/bg.jpg');
-	/* background-image: url('https://wallpapershome.com/images/pages/pic_h/18949.jpg'); */
+	background: #5B8FB9;
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.container-fluid .card {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.bg-image{
+	background: url('../image/bus-bg.jpg');
+	background-size: cover;
+	height: 100%;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.bg-image-register {
+	background: url('https://p0.piqsels.com/preview/544/745/150/bus-light-dark-glow.jpg');
+	background-size: cover;
+	height: 100%;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
 .card {
-	background: rgba(0, 0, 0, .8);
-	box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-	border-radius: 10px;
-}
-
-.card h5 {
-	color: #fff;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	display: flex;
+	padding: 50px;
 }
 
 .card .inputBox {
@@ -24,10 +53,10 @@ body {
 	width: 100%;
 	padding: 10px;
 	font-size: 16px;
-	color: #fff;
+	color: #20262E;
 	margin-bottom: 30px;
 	border: none;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #cecece;
 	outline: none;
 	background: transparent;
 }
@@ -36,7 +65,7 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	color: #fff;
+	color: #acacac;
 	font-size: 16px;
 	padding: 10px 0;
 	pointer-events: none;
@@ -47,14 +76,65 @@ body {
 .card .inputBox input:valid~label {
 	top: -18px;
 	left: 0;
-	color: #03a9f4;
+	color: #CD5888;
 	font-size: 12px;
 }
 
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-	body {
-		background-image: url('https://wallpapershome.com/images/pages/pic_h/18949.jpg');
-		background-size: cover;
+a {
+	text-decoration: none;
+	color: #5B8FB9
+}
+
+.divider {
+	display: flex;
+	color: #acacac;
+}
+.divider:before {
+	content: '';
+	flex: 1;
+}
+.divider:after {
+	content: '';
+	flex: 1;
+}
+
+.line {
+	align-items: center;
+	margin: 1em -1em;
+}
+.line:before {
+	height: 1px;
+	margin: 0 1em;
+}
+.line:after {
+	height: 1px;
+	margin: 0 1em;
+}
+
+.one-line:before {
+	background: #acacac;
+}
+.one-line:after {
+	background: #acacac;
+}
+
+@media (max-width: 768px) {
+
+	.row {
+		flex-direction: column;
+		align-content: center;
+	}
+
+	.bg-image {
+		display: none;
+		visibility: hidden;
+	}
+
+	.bg-image-register {
+		display: none;
+	}
+
+	.card {
+		padding: 10px;
 	}
 }
